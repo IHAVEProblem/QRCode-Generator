@@ -1,0 +1,269 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5; /*default, change if needed */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+ @media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+select:focus, textarea:focus, input:focus{
+  outline: none;
+}
+
+
+/* general */
+
+body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: 'Chango', cursive;
+  font-size: 14px;
+}
+
+.page {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  padding: 10px 0 ;
+  position: relative;
+  background-color: #161b22;
+  color: #fff;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.footer {
+  padding: 10px 0;
+  background-color: #161b22;
+  color: #fff;
+  text-align: center;
+}
+
+._container {
+  --max-width: 1180px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-text {
+  font-size: 16px;
+  text-decoration: none;
+  color: #f0f6fc;
+  margin-left: 10px;
+}
+
+.main_content {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  margin-top: 100px;
+}
+
+
+.content_title {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.content_text {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.text-description {
+  opacity: 0.7;
+  margin-top: 10px;
+}
+
+
+.main_content-left {
+  padding: 10px;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+
+.user_input {
+  padding: 5px;
+  background-color: #bdbdbd;
+  border: 3px solid #b0b8c0;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.user_input:focus {
+  border: 3px solid #30363d;
+}
+
+
+.user_select {
+  cursor: pointer;
+  padding: 5px;
+  background-color: #bdbdbd;
+  border: 3px solid #b0b8c0;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.user_select:focus {
+  border: 3px solid #30363d;
+}
+
+.user_input-label {
+  font-size: 10px;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.user_submit-btn {
+  cursor: pointer;
+  margin-top: 100px;
+  padding: 15px 10px;
+  background-color:#1f6feb;
+  color: #fff;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.user_submit-btn:hover {
+  background-color: #113264;
+  color: #fff;
+}
+
+
+.arrow-down {
+  width: auto;
+  height: auto;
+  position: relative;
+  margin: 60px auto;
+  animation-name: arrow;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes arrow {
+  0% {
+    top: 0px;
+  }
+  25% {
+    top: 50px
+  }
+  50% {
+    top: 0px;
+  }
+  75% {
+    top: 50px
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.genratedCode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.downloadBtn {
+  margin: 20px 0px;
+  background-color: #1f6feb;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #161b22;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.downloadBtn:hover {
+  background-color: #113264;
+  color: #fff;
+}
+
+.footer img{
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}

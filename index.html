@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./js/app.js" defer></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <title>QrCode для чего угодно!</title>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="header-content  _container">
+        <img class="logo-img" src="./img/QrLogo.png" alt="fancy logo" class="header_logo">
+        <p class="logo-text">QR Codek</p>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main_content _container"">
+        <div class="main_content-left">
+          <h1 class="content_title">QR Code Генератор</h1>
+          <p class="content_text">Создайте свой собстевнный QR Code для своей ссылки! </p>
+          <p class="text-description">*Просто вставьте скопированную ссылку в поле ввода ниже <br> выберите размер и наслаждайтесь совим новеньким <br> QR Кодом. smiley face</p>
+          <div class="content_form">
+            <form class="form" action="" id="generate_form">
+              <label class="user_input-label" for="url">Вставьте сслыку</label>
+              <input class="user_input" id="url" type="url" placeholder="https://example.com/..">
+              <label class="user_input-label" for="size">Выберите подходящий размер</label>
+              <select class="user_select" name="" id="size">
+                <option value="100">100x100px</option>
+                <option value="200">200x200px</option>
+                <option selected value="300">300x300px</option>
+                <option value="400">400x400px</option>
+                <option value="500">500x500px</option>
+              </select>
+              <button class="user_submit-btn" id="generateQrCode" type="submit">Сгенерировать QR Code</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="main_content-right">
+          <img src="./img/qr.png" alt="" class="img-right">
+        </div>
+      </div>
+      <div class="">
+        <img class="arrow-down" id="Arrow" src="./img/down-chevron.png" alt="">
+      </div>
+
+      <div class="generateCode _container">
+        <div class="genratedCode">
+          <a class="downloadBtn" id="downloadBtn" href="">Скачать QR Code</a>
+          <div class="" id="qrcode"></div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer_text">
+        <p>
+          Made with love by Arseniy G.
+        </p>
+      </div>
+      <div class="footer_img">
+        <img src="./img/loved.png" alt="love">
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
