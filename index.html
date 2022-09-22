@@ -26,8 +26,8 @@
           <p class="text-description">*Просто вставьте скопированную ссылку в поле ввода ниже <br> выберите размер и наслаждайтесь совим новеньким <br> QR Кодом.</p>
           <div class="content_form">
             <form class="form" action="" id="generate_form">
-              <label class="user_input-label" for="url">Вставьте сслыку</label>
-              <input class="user_input" id="url" type="url" placeholder="https://example.com/..">
+              <label class="user_input-label" for="url">Вставьте сслыку, текст или 😘😎!</label>
+              <input class="user_input" id="url" type="text" placeholder="https://example.com/..">
               <label class="user_input-label" for="size">Выберите подходящий размер</label>
               <select class="user_select" name="" id="size">
                 <option value="100">100x100px</option>
@@ -51,7 +51,9 @@
       <div class="generateCode _container">
         <div class="genratedCode">
           <a class="downloadBtn" id="downloadBtn" href="">Скачать QR Code</a>
-          <div class="" id="qrcode"></div>
+          <div class="qr-border">
+            <div class="" id="qrcode"></div>
+          </div>
         </div>
       </div>
     </main>
