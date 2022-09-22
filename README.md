@@ -1,5 +1,5 @@
 # QRCode-Generator
-Simple QR Code Generator made with qrcode.js libriary.
+Simple QR Code Generator made with qrcode.js libriary made by https://github.com/davidshimjs/qrcodejs
 
 Soon I will add some options for color change.
 
