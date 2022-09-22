@@ -307,4 +307,8 @@ body {
   .text-description {
     font-size: 10px;
   }
+
+  .user_submit-btn {
+    margin-top: 20px;
+  }
 }
